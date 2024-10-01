@@ -27,7 +27,7 @@ app.add_middleware(
 async def root():
     return {"message": "Server is running"}
 
-app.include_router(drawoo_router, prefix="/calculate", tags=["calculate"])
+app.include_router(drawoo_router, prefix="calculate", tags=["calculate"])
 
 
 if __name__ == "__main__":
