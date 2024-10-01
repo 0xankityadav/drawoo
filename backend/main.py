@@ -11,7 +11,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-origins = ["https://drawoo-backend.vercel.app/"];
+origins = ["https://drawoo-backend.vercel.app"];
 
 
 app.add_middleware(
