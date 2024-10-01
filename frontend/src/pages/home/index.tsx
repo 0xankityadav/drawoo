@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { SWATCHES } from "@/constants";
-import { ColorSwatch, Group, rgba } from "@mantine/core";
+import { ColorSwatch, Group } from "@mantine/core";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import Draggable from "react-draggable";
@@ -242,7 +242,7 @@ export const Home = () => {
           <Draggable
             key={index}
             defaultPosition={latexPosition}
-            onStop={(e, data) => setLatexPosition({ x: data.x, y: data.y })}
+            onStop={(_, data) => setLatexPosition({ x: data.x, y: data.y })}
           >
             <div className="absolute p-2 text-white rounded shadow-md">
               <div className="latex-content">{latex}</div>
